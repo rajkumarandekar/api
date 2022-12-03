@@ -42,6 +42,6 @@ app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
 app.use("/api/categories", categoryRoute);
 
-app.listen("9990", (req, res) => {
-  console.log("Backend is running.");
+app.listen(process.env.port || 9990, (req, res) => {
+  console.log("Backend is running." + process.env.port);
 });
